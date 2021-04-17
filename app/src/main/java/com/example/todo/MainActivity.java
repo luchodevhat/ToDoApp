@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.todo.models.Functions;
+
+public class MainActivity extends AppCompatActivity implements Functions {
+
+    // atributos
 
     private EditText nombre,datos;
 
@@ -18,8 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
         nombre = (EditText) findViewById(R.id.entrada);
         datos = (EditText) findViewById(R.id.entrada2);
-
     }
+
+    // metodos abstractos
+
+    @Override
     public void guardar(View view) {
         String getNombre = nombre.getText().toString();
         String getDatos = datos.getText().toString();
@@ -28,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
         editorObjeto.putString(getNombre, getDatos);
         editorObjeto.commit();
         Toast.makeText(this, "Se ha guardado correctamente", Toast.LENGTH_SHORT).show();
-
     }
+
+    @Override
     public void buscar(View view) {
         String getNombre = nombre.getText().toString();
         SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             datos.setText(getDatos);
         }
     }
+
+    @Override
     public void limpiar(View view) {
         nombre.setText("");
         datos.setText("Work");
