@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="false"
-    android:background="#F67272"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
 
@@ -19,7 +19,9 @@
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        android:textColorHint="#FFE500"
+        android:shadowColor="@color/gold"
+        android:textColor="@color/gold"
+        android:textColorHint="@color/gold"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/entrada2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -34,8 +36,9 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="@string/Work"
-        android:textColor="#FFE500"
+        android:hint="@string/Work"
+        android:textColorHint="@color/gold"
+        android:textColor="@color/gold"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -49,7 +52,7 @@
         android:layout_marginRight="29dp"
         android:onClick="guardar"
         android:text="@string/guardar"
-        android:textColor="#FFE500"
+        android:textColor="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +66,7 @@
         android:layout_marginBottom="88dp"
         android:onClick="buscar"
         android:text="@string/buscar"
-        android:textColor="#FFE500"
+        android:textColor="@color/gold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -72,14 +75,14 @@
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="208dp"
-        android:layout_marginRight="208dp"
-        android:layout_marginBottom="372dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:layout_marginBottom="88dp"
         android:onClick="limpiar"
         android:shadowColor="#FF0000"
         android:text="@string/limpiar"
-        android:textColor="#FFE500"
-        android:textColorHighlight="#FF0404"
+        android:textColor="@color/gold"
+        android:textColorHighlight="@color/gold"
         android:textColorHint="#F80202"
         android:textColorLink="#FFEB3B"
         app:layout_constraintBottom_toBottomOf="parent"
